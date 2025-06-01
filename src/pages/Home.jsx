@@ -1,8 +1,16 @@
+import { Navigate, useNavigate } from "react-router-dom";
+
 function Home() {
+  const navigate =  useNavigate();
+  const handleClick = () => {
+    navigate('/auth')
+  }
   return (
-    <div className="h-screen bg-secondary-0">
-      <div className="container xl:max-w-screen-xl">
-        <h1 className="p-4 text-xl text-secondary-700">صفحه اصلی</h1>
+    <div className="h-screen flex items-center justify-center bg-secondary-0">
+      <div className="container text-center xl:max-w-screen-xl">
+        {/* <h1 className="p-4 text-xl text-secondary-700">صفحه اصلی</h1> */}
+        <h1 className="text-3xl md:text-4xl text-secondary-900 font-semibold">به <span className="font-black">فریلنسر</span> خوش آمدید</h1>
+        <button onClick={handleClick} className="text-secondary-800 text-lg mt-14">برای ثبت نام کلیک کنید</button>
       </div>
     </div>
   );

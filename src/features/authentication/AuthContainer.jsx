@@ -14,9 +14,9 @@ function AuthContainer() {
   const { handleSubmit, register, getValues } = useForm();
   const { user } = useUser();
 
-  useEffect(() => {
-    if (user) navigate("/", { replace: true });
-  }, [user, navigate]);
+  // useEffect(() => {
+  //   if (user) navigate("/", { replace: true });
+  // }, [user, navigate]);
 
   const {
     isPending: isSendingOtp,

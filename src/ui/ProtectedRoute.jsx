@@ -11,7 +11,7 @@ function ProtectedRoute({ children }) {
   const { isAuthenticated, isLoading, isAuthorized, isVerified } =
     useAuthorize();
 
-  // 2. check if is Authorized or not, check is is Authenticagted or not
+  // 2. check if is Authorized or not, check if is Authenticagted or not
   useEffect(() => {
     if (!isAuthenticated && !isLoading) navigate("/auth");
     if (!isVerified && !isLoading) {
