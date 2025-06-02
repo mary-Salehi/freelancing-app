@@ -13,10 +13,12 @@ function AuthContainer() {
   const [step, setStep] = useState(1);
   const { handleSubmit, register, getValues } = useForm();
   const { user } = useUser();
+  console.log(user?.role?.toLowerCase?.());
+  const userRole = user?.role?.toLowerCase?.();
 
-  // useEffect(() => {
-  //   if (user) navigate("/", { replace: true });
-  // }, [user, navigate]);
+  useEffect(() => {
+    if (user) navigate(`/${userRole}/dashboard`, { replace: true });
+  }, [user, navigate]);
 
   const {
     isPending: isSendingOtp,
